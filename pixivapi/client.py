@@ -752,6 +752,9 @@ class Client:
             },
         )
 
+        for illust in response["illusts"]:
+            del illust['illust_ai_type']
+
         return {
             "illustrations": [
                 Illustration(**illust, client=self) for illust in response["illusts"]
