@@ -754,6 +754,7 @@ class Client:
 
         for illust in response["illusts"]:
             del illust['illust_ai_type']
+            del illust['illust_book_style']
 
         return {
             "illustrations": [
